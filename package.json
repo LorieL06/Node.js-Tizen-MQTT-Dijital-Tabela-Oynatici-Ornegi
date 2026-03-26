@@ -1,0 +1,45 @@
+{
+  "name": "nodejs-tizen-mqtt-signage-player-case",
+  "version": "1.0.0",
+  "description": "Tizen/WebOS digital signage player case with MQTT commands and offline-first playlist",
+  "private": true,
+  "main": "dist/index.js",
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "build": "tsc -p tsconfig.json",
+    "build:tizen": "esbuild src/girisTizen.ts --bundle --platform=browser --format=iife --target=es2020 --outfile=dist-tv/giris.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LorieL06/nodejs-tizen-mqtt-signage-player-case.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/LorieL06/nodejs-tizen-mqtt-signage-player-case/issues"
+  },
+  "homepage": "https://github.com/LorieL06/nodejs-tizen-mqtt-signage-player-case#readme",
+  "dependencies": {
+    "mqtt": "^5.15.1",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "@typescript-eslint/eslint-plugin": "^8.57.2",
+    "@typescript-eslint/parser": "^8.57.2",
+    "esbuild": "^0.27.4",
+    "eslint": "^9.39.4",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
+    "prettier": "^3.8.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.1"
+  }
+}
